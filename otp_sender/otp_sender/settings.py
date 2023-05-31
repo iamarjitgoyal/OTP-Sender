@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'otp_sender.apps.OtpSenderConfig',
 ]
 
 MIDDLEWARE = [
@@ -53,9 +54,9 @@ ROOT_URLCONF = "otp_sender.urls"
 
 TEMPLATES = [
     {
-        "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
-        "APP_DIRS": True,
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': False,
         "OPTIONS": {
             "context_processors": [
                 "django.template.context_processors.debug",
