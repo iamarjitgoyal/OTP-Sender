@@ -19,8 +19,9 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = [
-    path('', views.register_user, name='register'),
+    path('', views.register_user, name='register_user'),
     path('save-data', views.register_user, name='save_data'),
-    path('success', views.success, name='success'),
+    path('verify-otp/', views.verify_otp, name='verify_otp'),
+    path('success/', views.success, name='success'),
     path('admin/', admin.site.urls),
 ]
