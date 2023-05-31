@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
+from django.views.decorators.csrf import csrf_exempt
 from .models import User
+
 
 def register_user(request):
     if request.method == 'POST':
@@ -11,5 +13,6 @@ def register_user(request):
         return redirect('success')
     return render(request, 'form.html')
 
+@csrf_exempt
 def success(request):
     return render(request, 'success.html')

@@ -55,7 +55,7 @@ ROOT_URLCONF = "otp_sender.urls"
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['./otp_sender/templates'],
         'APP_DIRS': False,
         "OPTIONS": {
             "context_processors": [
