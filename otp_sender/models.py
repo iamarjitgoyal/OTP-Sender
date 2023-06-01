@@ -5,3 +5,4 @@ class Users(models.Model):
     email = models.EmailField()
     phone = models.CharField(max_length=10)
     otp = models.CharField(max_length=6, default='000000')
+    distinct_id = models.CharField(max_length=50, default='arjit_goyal')
